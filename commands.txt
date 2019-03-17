@@ -1,0 +1,24 @@
+
+````
+curl -fsSL get.docker.com -o get-docker.sh && sh get-docker.sh
+
+# apt-get update
+# apt-get upgrade
+
+# apt-get dist-upgrade
+
+System Check
+Last, chance to check for any system inconsistencies. Perform database sanity and consistency checks for partially installed, missing and obsolete packages:
+# dpkg -C
+
+apt-mark showhold
+
+sed -i 's/jessie/stretch/g' /etc/apt/sources.list
+
+apt-get update
+
+apt-get --simulate upgrade
+# apt-get upgrade
+# apt-get dist-upgrade
+
+All done. Reboot your system.
